@@ -17,5 +17,8 @@ code {
     monospace;
 }
 body{
-  @apply bg-blue-gray-800
+  @apply bg-slate-800
+}
+li{
+  list-style:none;
 }
