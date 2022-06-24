@@ -13,6 +13,7 @@ export class NavBar extends Component {
             <Link to ='/' className='hover:bg-neutral-200 p-1 rounded-xl hover:text-slate-800 hover:font-medium hover:border-slate-900 '>Home</Link>
             <Link to ='/about' className='hover:bg-neutral-200 p-1 rounded-xl hover:text-slate-800 hover:font-medium hover:border-slate-900 '>About</Link>
             <Link to ='/contact' className='hover:bg-neutral-200 p-1 rounded-xl hover:text-slate-800 hover:font-medium hover:border-slate-900 '>Contact</Link>
+            <Link to ='/dashboard' className='hover:bg-neutral-200 p-1 rounded-xl hover:text-slate-800 hover:font-medium hover:border-slate-900 '>Dashboard</Link>
           </div>
         </div>
 

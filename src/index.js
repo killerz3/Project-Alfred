@@ -9,6 +9,7 @@ import './index.css';
 import App from './App';
 import About from './pages/About'
 import Contact from './pages/Contact';
+import Dashboard from './pages/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/about" element={<About/>} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   </BrowserRouter>
 );
