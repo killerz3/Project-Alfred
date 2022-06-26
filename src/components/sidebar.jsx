@@ -24,9 +24,9 @@ export default function Sidebar() {
             </button>
             <div className="absolute top-20 flex justify-center items-center flex-col gap-2 w-full">
                 <Link to='/' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
+                <Link to='/dashboard/settings' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
                 <Link to='/' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
-                <Link to='/' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
-                <Link to='/' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
+                    
             </div>
         </div>
     );
