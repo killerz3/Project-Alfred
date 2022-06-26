@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import NavBar from '../components/navbar/NavBar'
-export default class Contact extends Component {
-  render() {
-      return (
-        
-          <>
-              <NavBar/>
-              
-              
-          </>
-    )
-  }
+
+
+const Contact = () => {
+  return (
+    <div>
+      <NavBar/>
+    </div>
+  );
 }
+
+export default Contact;
+

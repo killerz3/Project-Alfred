@@ -17,7 +17,7 @@ code {
     monospace;
 }
 body{
-  @apply bg-slate-800
+  @apply bg-slate-800 
   
 }
 li{
