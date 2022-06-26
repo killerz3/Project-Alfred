@@ -2,6 +2,17 @@ import React from 'react'
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import Dots from '../../components/designs/dots';
+
+const HandleSubmit = async (Email,Password) => {
+    
+    if (Password == "" || Email == "") {
+        return alert()
+    }
+
+
+}
+
+
 export default function Login() {
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
