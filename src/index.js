@@ -16,6 +16,7 @@ import Settings from './pages/dashboard/settings';
 import Login from './pages/auth/login';
 import NotFound from './pages/404';
 import Signup from './pages/auth/signup';
+import NewMeet from './pages/dashboard/newMeet';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,6 +29,7 @@ root.render(
       <Route path="/Login" element={< Login/>} />
       <Route path="/signup" element={< Signup/>} />
       <Route path="/dashboard/settings" element={<Settings />} />
+      <Route path="/dashboard/new-meet" element={<NewMeet />} />
       <Route path="*" element={<NotFound />} />
 
     </Routes>

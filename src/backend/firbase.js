@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore ,query,collection,where,getDocs,addDoc} from "firebase/firestore";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut } from "firebase/auth";
+import { getFirestore, query, collection, where, getDocs, addDoc } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider,FacebookAuthProvider, signInWithPopup, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signOut } from "firebase/auth";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyDst6_rz4fTqw68_4adjr3-o0hoVZwco0U",
@@ -51,6 +51,12 @@ const signInWithGoogle = async () => {
     }
 };
 
+
+
+
+
+
+
 const RegisterWithEmailAndPassword = async (name, email, password) => {
     try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
@@ -91,5 +97,6 @@ export {
     RegisterWithEmailAndPassword,
     sendPasswordReset,
     logout,
+    
 };
 

@@ -7,7 +7,7 @@ import Sidebar from '../../components/sidebar';
 export default function Dashboard() {
     
     return (
-        <div className='flex '>
+        <div className='flex h-full'>
             <Sidebar/>
             <AppointmentGrid/>
         </div>

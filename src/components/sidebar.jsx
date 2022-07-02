@@ -20,8 +20,8 @@ export default function Sidebar() {
 
     return (
         <div
-            className={`${Open ? "w-96 md:w-72" : "w-40 md:w-20"
-                } bg-slate-900  text-neutral-100  relative duration-300 ease-in `}
+            className={`${Open ? "w-96 md:w-72" : "w-20 sm:w-28 md:w-20"
+                } bg-slate-900  text-neutral-100  relative duration-300 ease-in min-h-screen inline-block`}
         >
             <button
                 onClick={() => {
@@ -37,7 +37,7 @@ export default function Sidebar() {
                 )}
             </button>
             <div className="absolute top-20 flex justify-center items-center flex-col gap-2 w-full">
-                <Link to='/' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
+                <Link to='/dashboard/new-meet' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i class="fa-solid fa-calendar-plus h-4 w-4"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>New Meeting</span></Link>
                 <Link to='/dashboard/settings' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
                 <Link to='/' className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-calendar"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>Bookings</span></Link>
                 <button onClick={logout} className="border border-slate-100 rounded-lg px-3 py-1 flex justify-center  items-center gap-1 "><i className="fa-solid fa-arrow-right-from-bracket"></i><span className={`${Item?"":"hidden"} duration-300 delay-150`}>logout</span></button>

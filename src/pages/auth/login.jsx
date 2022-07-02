@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import Dots from '../../components/designs/dots';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import {auth,logInWithEmailAndPassword,signInWithGoogle} from '../../backend/firbase'
+import {auth,logInWithEmailAndPassword,signInWithFacebook,signInWithGoogle} from '../../backend/firbase'
 import { useAuthState } from "react-firebase-hooks/auth";
 
 
@@ -34,7 +34,7 @@ export default function Login() {
 
             <div className={` ${Bg} w-full mx-10 lg:w-1/2 flex flex-col lg:flex-row rounded-lg opacity-75 py-5 relative duration-300`}>
                 <Dots cross={goBack} check={check} minus={()=>setBg('bg-slate-400')} />
-                <div className='w-full lg:w-2/3 relative'>
+                <div className='w-full lg:w-2/3 relative '>
 
                     <span className='text-5xl ml-6 text-gray-700'>Sign In</span>
                     <form className='mx-3 mt-9 mb-5'>
@@ -66,11 +66,12 @@ export default function Login() {
 
                     <Link to='/signup' replace="true" className='text-xl ml-2'>or Sign Up</Link>
                 </div>
-                <div className='h-40'>
-                    Sign In with
-                    <button onClick={signInWithGoogle} className={`ml-7 w-1/3 text-xl py-1 rounded ${Bg==='bg-slate-400'?"bg-slate-500":"bg-green-400"} shadow-lg drop-shadow  delay-150 hover:-translate-y-[5px] duration-200 ease-linear`}>
-                        ass
+                <div className=' w-full lg:w-1/3 flex flex-col mt-7 justify-center items-center lg:justify-start lg:items-start'>
+                    <span className="text-3xl mr-6 text-gray-700">Sign In with</span>
+                    <button onClick={signInWithGoogle} className={` w-2/3 text-xl flex justify-center items-center mt-5 py-1 rounded ${Bg==='bg-slate-400'?"bg-slate-500":"bg-green-400"} shadow-lg drop-shadow  delay-150 hover:-translate-y-[5px] duration-200 ease-linear`}>
+                    <i class="fa-brands fa-google mr-2"></i>Google
                     </button>
+                    
                 </div>
 
             </div>
