@@ -5,6 +5,7 @@ import Dots from '../../components/designs/dots';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth,logInWithEmailAndPassword,signInWithFacebook,signInWithGoogle} from '../../backend/firbase'
 import { useAuthState } from "react-firebase-hooks/auth";
+import googleicon from "../../assets/googleicon.png";
 
 
 
@@ -36,9 +37,9 @@ export default function Login() {
                 <Dots cross={goBack} check={check} minus={()=>setBg('bg-slate-400')} />
                 <div className='w-full lg:w-2/3 relative '>
 
-                    <span className='text-5xl ml-6 text-gray-700'>Sign In</span>
+                    <span className='text-5xl ml-6 text-black-400'>Sign In</span>
                     <form className='mx-3 mt-9 mb-5'>
-                        <label className='m-4 text-gray-800 flex flex-col'>Enter Email Adress:
+                        <label className='m-4 text-black-100 flex flex-col'>Enter Email Adress:
                             <input
                                 type="email"
                                 value={Email}
@@ -49,7 +50,7 @@ export default function Login() {
                         </label>
                     </form>
                     <form className='mx-3 my-9'>
-                        <label className='m-4 text-gray-800 flex flex-col'>Enter Password:
+                        <label className='m-4 text-black-200 flex flex-col'>Enter Password:
                             <input
                                 type="password"
                                 value={Password}
@@ -60,16 +61,18 @@ export default function Login() {
                         </label>
                         <span className='text-red-600 ml-7'>{ErrorMsg}</span>
                     </form>
-                    <button onClick={() => logInWithEmailAndPassword(Email, Password)} className={`ml-7 w-1/3 text-xl py-1 rounded ${Bg==='bg-slate-400'?"bg-slate-500":"bg-green-400"} shadow-lg drop-shadow  delay-150 hover:-translate-y-[5px] duration-200 ease-linear`}>
+                    <button onClick={() => logInWithEmailAndPassword(Email, Password)} className={`ml-[24%] lg:ml-7 w-1/4 lg:w-1/3 text-xl py-1 rounded ${Bg==='bg-slate-400'?"bg-slate-500":"bg-green-400"} shadow-lg drop-shadow  delay-150 hover:-translate-y-[5px] duration-200 ease-linear`}>
                         Submit
                     </button>
 
                     <Link to='/signup' replace="true" className='text-xl ml-2'>or Sign Up</Link>
                 </div>
-                <div className=' w-full lg:w-1/3 flex flex-col mt-7 justify-center items-center lg:justify-start lg:items-start'>
-                    <span className="text-3xl mr-6 text-gray-700">Sign In with</span>
-                    <button onClick={signInWithGoogle} className={` w-2/3 text-xl flex justify-center items-center mt-5 py-1 rounded ${Bg==='bg-slate-400'?"bg-slate-500":"bg-green-400"} shadow-lg drop-shadow  delay-150 hover:-translate-y-[5px] duration-200 ease-linear`}>
-                    <i class="fa-brands fa-google mr-2"></i>Google
+                
+                <div className='h-40 text-xl  pt-20 px-[30%] lg:px-0 lg:pt-[20%]'>
+                    or sign in with
+                    
+                    <button onClick={signInWithGoogle} className={`ml-7 lg:mt-2 w-1/3 text-[16px]  p-[5px] rounded ${Bg==='bg-slate-400'?"bg-slate-500":"bg-green-400"} shadow-lg drop-shadow  delay-150 hover:-translate-y-[5px] duration-200 ease-linear`}>
+                        Google
                     </button>
                     
                 </div>
